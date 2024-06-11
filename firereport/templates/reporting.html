@@ -1,0 +1,79 @@
+{% include 'navbar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporting - Online Fire Report Management System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+</head>
+
+<body style="background-color: #f7f7f7;">
+<img src="{% static 'images/fire brigade.gif' %}" style="width:100%; height:450px;">
+
+<div class="container mt-5" data-aos="fade-up" data-aos-duration="6000">
+    <h1 class="page-title text-center">Online Fire Report</h1>
+    <div class="card mt-3" style="border: 5px solid #573170;">
+        <div class="card-body">
+            <h2 class="card-title text-center" style="color:orange;">Report Now</h2>
+            <hr>
+            <form method="post">
+                <!-- Form fields -->
+                {% csrf_token %}
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" style="color: green; font-size: 20px;">Name</label>
+                    <div class="col-sm-10">
+                        <input type="text" name="FullName" class="form-control" placeholder="Enter Name" pattern="[A-Za-z ]+" title="Only alphabets allowed" required>
+                    </div>
+                </div>
+                
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" style="color: green; font-size: 20px;">Mobile Number</label>
+                    <div class="col-sm-10">
+                        <input type="tel" name="MobileNumber" class="form-control" placeholder="Enter Mobile No." pattern="[0-9]{10}" title="Please enter a 10 digit mobile number" maxlength="10" required>
+                    </div>
+                </div>
+                
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" style="color: green; font-size: 20px;">Location</label>
+                    <div class="col-sm-10">
+                        <input type="text" id="location" name="Location" class="form-control" placeholder="Enter Your Location" required>
+                    </div>
+                </div>
+                
+                <div class="mb-3 row">
+                    <label class="col-sm-2 col-form-label" style="color: green; font-size: 20px;">Message</label>
+                    <div class="col-sm-10">
+                        <textarea name="Message" class="form-control" placeholder="Message...." required style="font-size: 20px;"></textarea>
+                    </div>
+                </div>
+                
+                <div class="mb-3 row">
+                    <div class="col-sm-10 offset-sm-2">
+                        <button type="submit" class="btn btn-primary float-left">Submit</button>
+                    </div>
+                </div>
+            </form>
+      
+
+{% if error == "no" %}
+<script>
+    alert('Reporting Successful');
+</script>
+{% endif %}
+
+{% if error == "yes" %}
+<script>
+    alert('Something went wrong, Try Again...');
+</script>
+{% endif %}
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>
+
+{% include 'footer.html' %}

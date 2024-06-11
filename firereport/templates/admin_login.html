@@ -1,0 +1,43 @@
+{% include 'navbar.html' %}
+{% load static %}
+<body style="background-color: #dbe2da;">
+    <img src="{% static 'images/fire4.jpg' %}" style="width:100%; height:350px;">
+    <hr>
+    <div class="container mt-5">
+        <div class="card" data-aos="zoom-in-up" data-aos-duration="1000"> <!-- Add data-aos attributes here -->
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="card mt-3" style="border: 5px solid #573170;"><br>
+                        <h2 class="card-title text-center text-danger">Admin Login</h2>
+                        <div class="mb-3">
+                            <label style="color: green; font-size: 20px;">Username</label>
+                            <input type="text" name="uname" class="form-control" placeholder="Enter Username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label style="color: green; font-size: 20px;">Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Enter Password" required>
+                        </div>
+                        <button type="submit" class="btn btn-success">Submit</button><br>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {% if error == "no" %}
+    <script>
+        alert('Logged In Successfully');
+        window.location=('{% url 'dashboard' %}');
+    </script>
+    {% endif %}
+
+    {% if error == "yes" %}
+    <script>
+        alert('Invalid Credentials, Please try again');
+    </script>
+    {% endif %}
+</body>
+
+{% include 'footer.html' %}
+

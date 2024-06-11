@@ -1,0 +1,64 @@
+{% include 'navbar.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index - Online Fire Report Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+        .background {
+            position: relative;
+            height: 100%;
+            background-image: url("{% static 'images/fire3.jpg' %}");
+            background-size: cover;
+            background-position: center;
+        }
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: brown;
+            font-size: 18px;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+  <div class="background">
+    <div class="overlay" data-aos="flip-left" data-aos-duration="200">
+        <p>
+            <p style="border : 6px ridge green">
+            <b align="center">Welcome to the Online Fire Reporting System!</b>
+            <br>
+            Our mission is to provide a seamless and efficient platform for reporting fire incidents swiftly and accurately. In the face of emergencies, time is of the essence, and our system is designed to streamline the process of reporting fires to the appropriate authorities, ensuring timely response and effective management of resources.
+            <br>
+            With our user-friendly interface, individuals and organizations can easily submit reports of fire incidents, providing essential details such as location, severity, and any relevant information to assist emergency responders. 
+            <br>
+            <b>Features</b><br>
+            1.<i>User-Friendly Interface:</i> Our platform features an intuitive interface designed for ease of use, allowing users to submit reports effortlessly.<br>
+            2.<i>Real-Time Updates:</i> Users can track the status of their reports in real-time, ensuring transparency and accountability.<br>
+            3.<i>Secure and Confidential:</i> We prioritize the security and confidentiality of user data, employing robust encryption protocols to safeguard sensitive information.<br>
+            <br>
+            <b align="center">Get Involved</b><br>
+            Join us in our mission to improve fire reporting and emergency response efforts. Together, we can make a difference in ensuring the safety and well-being of our communities.
+        </p>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
+{% include 'footer.html' %}
