@@ -49,31 +49,26 @@ The Online Fire Reporting System is a web-based platform designed to streamline 
 1. Clone the repository  
    ```bash
    git clone https://github.com/your-username/Online-Fire-Reporting-System-Django.git
-Navigate to the project directory
+   
+2. Navigate to the project directory
+   ```bash
+    cd Online-Fire-Reporting-System-Django
 
-bash
-Copy code
-cd Online-Fire-Reporting-System-Django
-Install required dependencies
+3. Install required dependencies
+    ```bash
+    pip install django
 
-bash
-Copy code
-pip install django
-Run database migrations
+4. Run database migrations
+     ```bash
+     python manage.py migrate
 
-bash
-Copy code
-python manage.py migrate
-Start the development server
+5. Start the development server
+     ```bash
+     python manage.py runserver
 
-bash
-Copy code
-python manage.py runserver
-Open your browser and visit
-
-cpp
-Copy code
+6. Open your browser and visit
 http://127.0.0.1:8000/
+
 ---
 
 ## 📁 Project Structure
