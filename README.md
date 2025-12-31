@@ -46,7 +46,7 @@ The Online Fire Reporting System is a web-based platform designed to streamline 
 
 ## 🧪 How to Run the Project
 
-1. Clone the repository(Replace `your-username` with your GitHub username while cloning) 
+1. Clone the repository (Replace `your-username` with your GitHub username while cloning)
    ```bash
    git clone https://github.com/your-username/Online-Fire-Reporting-System-Django.git
    
