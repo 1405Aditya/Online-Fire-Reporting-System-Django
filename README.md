@@ -65,13 +65,8 @@ http://127.0.0.1:8000/
 
 ---
 
-##📁 Project Structure
-
+## 📁 Project Structure
 - OnlineFire_ReportingSystem/ – Main Django project
 - firereport/ – Application handling fire incident logic
 - db.sqlite3 – Database
 - manage.py – Django project manager
-
-
-
-
