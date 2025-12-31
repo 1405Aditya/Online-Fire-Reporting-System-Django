@@ -1,9 +1,8 @@
 # Online Fire Reporting System (Django)
 
+## 📌 Project Overview
 The Online Fire Reporting System is a web-based platform designed to streamline the process of reporting fire incidents and enhancing emergency response. It allows users to submit detailed reports of fire incidents, including location, severity, and other critical information, directly through the website. The system offers real-time tracking of reports, secure data handling, and efficient communication between citizens and emergency services. By leveraging technology, this platform aims to provide a faster and more reliable alternative to traditional emergency call methods, ensuring timely intervention and better resource management during fire emergencies.
 
-## 📌 Project Overview
-The Online Fire Reporting System is a web-based application developed using Django to streamline the process of reporting fire incidents and improving emergency response efficiency. The platform enables users to submit detailed fire reports, including location, severity, and incident details, through an intuitive web interface. It aims to provide a faster, more reliable alternative to traditional emergency reporting methods.
 
 ---
 
@@ -66,15 +65,12 @@ http://127.0.0.1:8000/
 
 ---
 
-📁 Project Structure
+##📁 Project Structure
 
-OnlineFire_ReportingSystem/ – Main Django project
-
-firereport/ – Application handling fire incident logic
-
-db.sqlite3 – Database
-
-manage.py – Django project manager
+- OnlineFire_ReportingSystem/ – Main Django project
+- firereport/ – Application handling fire incident logic
+- db.sqlite3 – Database
+- manage.py – Django project manager
 
 
 
